@@ -345,6 +345,7 @@ background: var(--footer-color);
 }
 .footer .conteiner{
     display: flex;
+    align-items: baseline;
 }
 .logo-footer{margin-bottom: 20px;
 display: block;}
@@ -384,7 +385,7 @@ margin-bottom: 9px;}
     line-height: 1.14;
     color: var(--white-color);
     text-transform: uppercase;
-    margin-top: 12px;
+   
     
 }
 .footer-logo-address{
