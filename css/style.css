@@ -155,10 +155,11 @@ margin-left: auto;
 .header-link:hover,
 .header-link:focus {
     color: var(--blue-color);
-    fill: var(--blue-color);
+  
 }
 .contacs-icon{
     margin-right: 10px;
+    fill: currentColor;
 }
 
 
@@ -212,23 +213,25 @@ button.hero-btn {
     content: "";
     display: block;
     height: 120px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    
     margin-bottom: 30px;
 background: var(--grey-color);
+background-position: 50% 50%;
+background-repeat: no-repeat;
+
 }
 .icon-rect::before{
-    background-image: url(../image/Group\ 1.jpg);
+    background-image: url(../image/antenna.svg);
+    
 }
 .icon-clock::before{
-    background-image: url(../image/Group\ 2.jpg);
+    background-image: url(../image/clock.svg);
 }
 .icon-diagram::before{
-    background-image: url(../image/Group\ 3.jpg);
+    background-image: url(../image/diagram.svg);
 }
 .icon-ilon::before{
-    background-image: url(../image/Group\ 4.jpg);
+    background-image: url(../image/astronaut.svg);
 }
 
 
@@ -306,13 +309,16 @@ background: var(--grey-color);
 .team-soc-link:hover,
 .team-soc-link:focus {}
 /*__________________Clients_______________________*/
+
 .clients-list{
-    display: flex;
-    justify-content: center;
-    
+    --card-item:6;
 }
-.clients-item{
-    margin-right: 30px;
+
+.clients-item:last-child{margin-right: 0;}
+
+.clients-link{
+    display: flex;
+    fill: var(--soc-grey-color);
     width: 170px;
     height: 92px;
     border: 1px solid #AFB1B8;
@@ -322,20 +328,11 @@ background: var(--grey-color);
     justify-content: center;
     
 }
-.clients-item:last-child{margin-right: 0;}
 
-.clients-link{
-    display: flex;
-    fill: var(--soc-grey-color);
-    
-    
-}
-.clients-item:focus, .clients-item:hover{
-    border: 1px solid var(--blue-color);
-    border-radius: 4px;
-}
 .clients-link:focus, .clients-link:hover{
     fill: var(--blue-color);
+    border: 1px solid var(--blue-color);
+    border-radius: 4px;
 }
 
 /*--------------FOOTER------------------*/
@@ -399,39 +396,17 @@ margin-bottom: 9px;}
     margin-bottom: 20px;
     display: block;
 }
-
-.footer-soc-item{
-    width: 44px;
-    height: 44px;
-    margin-right: 10px;
-    
-}
-.footer-soc-icon{
-    fill:#ffffff
-}
-.footer-soc-list{
-    display: flex;
-    justify-content: center;
-}
-    
-.footer-soc-item:last-child{
-    margin-right: 0;
-}
-.footer-soc-link{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+.footer .team-soc-link {
     fill: var(--white-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: rgba(255, 255, 255, 0.1);
-   
+    border-radius: 50%;
 }
-.footer-soc-link:hover, .footer-soc-link:focus{
+.footer .team-soc-link:hover, .footer .team-soc-link:focus{
     background: var(--blue-color);
     
 }
+
+
 /*----------------------FILTER-----------------------*/
 .filter{
     padding-top: 94px;
@@ -458,7 +433,7 @@ button.filter-btn {
 }
 
 .filter-btn:hover,
-.filter-btnfocus {
+.filter-btn:focus {
     color: var(--white-color);
     background: var(--blue-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
@@ -468,7 +443,12 @@ button.filter-btn {
 }
 
 /*--------------------PORTFOLIO-------------------------*/
-
+.portfolio-list{
+    display: flex;
+}
+.portfolio-link{
+    display: block;
+}
 .portfolio-title {
     font-weight: 700;
     font-size: 18px;
@@ -483,8 +463,8 @@ button.filter-btn {
 }
 .portfolio-footer{border: 1px solid #EEEEEE;
 padding: 20px 24px;}
-.portfolio-item:focus,
-.portfolio-item:hover{
+.portfolio-link:focus,
+.portfolio-link:hover{
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 0px 4px 4px rgba(0, 0, 0, 0.06),
 1px 4px 6px rgba(0, 0, 0, 0.16);
